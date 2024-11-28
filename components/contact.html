@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bassein | Terms & Conditions</title>
+    <link rel="icon" type="image/png" href="/img/icon.jpg">
+    <link rel="icon" type="image/png" href="/img/icon.png">
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="/js/index.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script> 
+    <style>
+        body {
+            padding-top: 160px; 
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="header-placeholder"></div>
+    <div class="relative font-serif bg-gradient-to-r from-blue-100 via-white to-blue-100 py-28 px-8 sm:px-12 lg:px-24 ">
+        <div class="absolute inset-0 bg-[url('/img/contact_bg.png')] bg-cover bg-bottom"></div>
+        <div class="relative">
+            <h1 class="text-white font-bold text-4xl sm:text-5xl lg:text-5xl">Contacts</h1>
+            <p class="text-gray-200 text-sm sm:text-base lg:text-lg mt-4">
+                <span 
+                    class="hover:font-bold cursor-pointer " 
+                    onclick="window.location.href='/index.html'">
+                    Home
+                </span> 
+            | Contacts</p>
+        </div>
+    </div>
+    <div class=" ml-16 mr-16 pl-12 pr-12 font-serif">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="text-yellow-400 uppercase text-;g font-semibold tracking-wide mt-8">------------ Contact Info </p>
+            <h1 class="text-black font-bold text-4xl lg:text-5xl mt-12">We Are Open To Discuss</h1>
+            <p class="text-gray-700 mt-8">
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+            <div class="mt-6 space-y-4">
+              <div class="flex items-center">
+                <span class="text-green-600 text-xl mr-4">🏠</span>
+                <div>
+                  <p class="font-semibold text-gray-800">Address</p>
+                  <p class="text-gray-600 text-sm">123, New Lenox Chicago, IL 60606</p>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <span class="text-green-600 text-xl mr-4">📧</span>
+                <div>
+                  <p class="font-semibold text-gray-800">Email</p>
+                  <p class="text-gray-600 text-sm">info@hradviser.com</p>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <span class="text-green-600 text-xl mr-4">📞</span>
+                <div>
+                  <p class="font-semibold text-gray-800">Phone</p>
+                  <p class="text-gray-600 text-sm">+383321132</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d400841.3895676304!2d-88.06258467811114!3d41.82970554674363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2c3cd0f4cbed%3A0xafe0a6ad09c0c000!2sChicago%2C%20IL%2C%20USA!5e0!3m2!1sen!2sin!4v1732353339766!5m2!1sen!2sin" 
+                class="w-full h-64 lg:h-96 rounded-lg shadow-md mt-24" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    <div>
+        <h2 class="font-serif font-bold text-black text-center text-6xl mt-6">Get In Touch</h2>
+    </div>
+    <div class="container mx-auto px-4 py-12">
+        <div class=" max-w-lg mx-auto">
+          <form id="contactForm" class="space-y-6">
+            <!-- Name and Email Fields -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Enter your name"
+                  required
+                  class="w-full border bg-gray-300  px-6 py-4 text-gray-700 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                />
+              </div>
+              <div>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  required
+                  class="w-full border bg-gray-300  px-6 py-4 text-gray-700 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                />
+              </div>
+            </div>
+            <!-- Message Field -->
+            <div>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Enter your message"
+                required
+                class="w-full border bg-gray-300 px-4 py-2 text-gray-700 focus:ring-2 focus:ring-green-500 focus:outline-none h-32"
+              ></textarea>
+            </div>
+            <!-- Checkbox -->
+            <div class="flex items-start">
+              <input
+                type="checkbox"
+                id="agree"
+                name="agree"
+                required
+                class="h-5 w-5 text-gray-700 border-gray-300 rounded focus:ring-2 focus:ring-green-500"
+              />
+              <label for="agree" class="ml-2 text-gray-700">
+                I agree that my submitted data is being collected and stored.
+              </label>
+            </div>
+            <!-- Submit Button -->
+            <div>
+              <button
+                type="submit"
+                class="w-full bg-gray-300 text-gray-700 font-medium py-2 hover:bg-green-700 transition"
+              >
+                Submit Request
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+</body>
+</html>
