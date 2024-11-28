@@ -57,3 +57,22 @@ function updateSliderImage() {
 
 // Initialize slider when DOM is loaded
 document.addEventListener('DOMContentLoaded', initializeSlider);
+
+//services scroll bar
+const scrollLeftButton = document.getElementById("scrollLeft");
+    const scrollRightButton = document.getElementById("scrollRight");
+    const serviceContainer = document.getElementById("serviceContainer");
+    
+    scrollLeftButton.addEventListener("click", () => {
+      serviceContainer.scrollBy({
+        left: -serviceContainer.clientWidth,
+        behavior: "smooth"
+      });
+    });
+    
+    scrollRightButton.addEventListener("click", () => {
+      serviceContainer.scrollBy({
+        left: serviceContainer.clientWidth,
+        behavior: "smooth"
+      });
+    });
