@@ -78,7 +78,6 @@ Promise.all([
     document.getElementById('footer-placeholder').innerHTML = footerData;
     
     initializeHeaderEvents();
-    initializeEventListeners();
 }).catch(error => {
     console.error('Error loading content:', error);
 });
