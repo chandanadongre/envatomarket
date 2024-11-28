@@ -7,14 +7,131 @@
     <link rel="icon" type="image/png" href="img/icon.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="js/index.js" defer></script>
+    <script src="js/home.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body class="bg-gray-50 min-h-screen">
     <div id="header"></div>
-    <div id="custom-padding" class="mt-40">
-        
+    <!-- Hero Section with Slider -->
+    <div class="relative h-screen mt-40 font-serif">
+        <img class="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat transition-all duration-500 ease-in-out" src="img/bg4.jpg">
+        <div id="hero-slider" class="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat transition-all duration-500 ease-in-out">
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black bg-opacity-50">
+                <!-- Content -->
+                <div class="container mx-auto h-full flex flex-col justify-center items-center text-center px-4">
+                    <p class="text-xl md:text-2xl text-cyan-300 mb-8">YOUR DREAM SWIMMING POOL</p>
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4">
+                        Build Your Dream<br>Swimming Pool
+                    </h1>
+                    
+                    <a href="components/blog.html" class="bg-cyan-500 mt-4 text-white px-8 py-4 font-semibold hover:bg-cyan-600 transition-all duration-300">
+                        DISCOVER MORE
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button id="prev-slide" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-70 text-white p-4 rounded-full transform transition-all duration-300 hover:scale-110">
+            <i class="fas fa-chevron-left text-2xl"></i>
+        </button>
+        <button id="next-slide" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-70 text-white p-4 rounded-full transform transition-all duration-300 hover:scale-110">
+            <i class="fas fa-chevron-right text-2xl"></i>
+        </button>
     </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 font-serif">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div>
+                <p class="text-yellow-400 uppercase text-sm font-semibold tracking-wide">------------ WE BUILD THE BEST POOLS</p>
+                <h2 class="text-black font-bold text-3xl sm:text-4xl lg:text-5xl mt-6">Benefits Of An Indoor Swimming Pool Premise</h2>
+                <p class="text-gray-700 mt-6">
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </p>
+                <button class="bg-yellow-400 mt-4 text-white px-6 py-3 font-semibold hover:bg-cyan-600 transition-all duration-300" onclick="window.location.href='components/about.html';">READ MORE</button>
+            </div>
+            <div class="container mx-auto px-4 py-12">
+                <div class="bg-black shadow-md  p-8 max-w-lg mx-auto">
+                    <h2 class="text-white font-bold text-4xl text-center">Request A Quote</h2>
+                  <form id="contactForm" class="space-y-6 mt-4">
+                    <!-- Name and Email Fields -->
+                    <div>
+                        <select
+                            id="service"
+                            name="service"
+                            required
+                            class="w-full border border-gray-300 bg-white text-gray-700 px-4 py-2 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                        >
+                            <option value="" disabled selected>Fibreglass Pools</option>
+                            <option value="">TV Commercial</option>
+                            <option value="">Friends Recommended</option>
+                            <option value="">Billboard Commercial</option>
+                        </select>
+                    </div>
+        
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          placeholder="Enter your name"
+                          required
+                          class="w-full border border-gray-300 text-gray-700 bg-white px-4 py-2  focus:ring-2 focus:ring-green-500 focus:outline-none"
+                        />
+                      </div>
+                      <div>
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          placeholder="Enter your email"
+                          required
+                          class="w-full border border-gray-300  bg-white  px-4 py-2 text-gray-700 focus:ring-2 focus:ring-green-500 focus:outline-none"
+                        />
+                      </div>
+                    </div>
+                    <!-- Message Field -->
+                    <div>
+                      <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Enter your message"
+                        required
+                        class="w-full border border-gray-300 bg-white px-4 py-2 text-gray-700 focus:ring-2 focus:ring-green-500 focus:outline-none h-32"
+                      ></textarea>
+                    </div>
+                    <!-- Checkbox -->
+                    <div class="flex items-start">
+                      <input
+                        type="checkbox"
+                        id="agree"
+                        name="agree"
+                        required
+                        class="h-5 w-5 bg-white border-gray-300  focus:ring-2 focus:ring-green-500"
+                      />
+                      <label for="agree" class="ml-2 text-gray-400">
+                        I agree that my submitted data is being collected and stored.
+                      </label>
+                    </div>
+                    <!-- Submit Button -->
+                    <div>
+                      <button
+                        type="submit"
+                        class=" bg-gray-400 text-white font-medium py-4 px-4"
+                      >
+                        Submit Request
+                      </button>
+                    </div>
+                  </form>
+                </div>
+            </div>
+        </div>
     <div id="footer"></div>
 </body>
 </html>
