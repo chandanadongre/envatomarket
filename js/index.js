@@ -82,3 +82,11 @@ Promise.all([
 }).catch(error => {
     console.error('Error loading content:', error);
 });
+
+const form = document.getElementById('contactForm');
+    form.addEventListener('submit', (event) => {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        alert('Please fill out all required fields before submitting.');
+      }
+    });
