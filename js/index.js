@@ -1,9 +1,13 @@
 document.addEventListener('DOMContentLoaded', async () => {
+    // Determine if we're in a subdirectory
+    const isInSubdirectory = window.location.pathname.includes('/components/');
+    const basePath = isInSubdirectory ? '../' : '';
+
     // Load header and footer
     try {
         const [headerResponse, footerResponse] = await Promise.all([
-            fetch('components/header.html'),
-            fetch('components/footer.html')
+            fetch(`${basePath}components/header.html`),
+            fetch(`${basePath}components/footer.html`)
         ]);
 
         if (!headerResponse.ok || !footerResponse.ok) {
@@ -15,8 +19,31 @@ document.addEventListener('DOMContentLoaded', async () => {
             footerResponse.text()
         ]);
 
-        document.getElementById('header').innerHTML = headerHtml;
-        document.getElementById('footer').innerHTML = footerHtml;
+        // Insert the components
+        const headerElement = document.getElementById('header');
+        const footerElement = document.getElementById('footer');
+
+        if (headerElement) {
+            // Process header HTML to fix paths when in subdirectory
+            let processedHeaderHtml = headerHtml;
+            if (isInSubdirectory) {
+                processedHeaderHtml = headerHtml.replace(/src="img\//g, 'src="../img/')
+                                              .replace(/href="components\//g, 'href="../components/')
+                                              .replace(/href="index.html/g, 'href="../index.html');
+            }
+            headerElement.innerHTML = processedHeaderHtml;
+        }
+
+        if (footerElement) {
+            // Process footer HTML to fix paths when in subdirectory
+            let processedFooterHtml = footerHtml;
+            if (isInSubdirectory) {
+                processedFooterHtml = footerHtml.replace(/src="img\//g, 'src="../img/')
+                                              .replace(/href="components\//g, 'href="../components/')
+                                              .replace(/href="index.html/g, 'href="../index.html');
+            }
+            footerElement.innerHTML = processedFooterHtml;
+        }
 
         // Initialize menu functionality after components are loaded
         initializeMenu();
@@ -75,4 +102,13 @@ function initializeMenu() {
             });
         }
     });
+}
+const form = document.getElementById('contactForm');
+    if (form) {
+        form.addEventListener('submit', (event) => {
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                alert('Please fill out all required fields before submitting.');
+            }
+        });
 }
