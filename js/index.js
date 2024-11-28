@@ -88,4 +88,4 @@ const form = document.getElementById('contactForm');
         event.preventDefault();
         alert('Please fill out all required fields before submitting.');
       }
-    });
+});
