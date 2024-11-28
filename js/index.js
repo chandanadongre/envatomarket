@@ -70,8 +70,8 @@ function initializeHeaderEvents() {
 
 // Load header, footer and other content
 Promise.all([
-    fetch('header.html').then(response => response.text()),
-    fetch('footer.html').then(response => response.text()),
+    fetch('/components/header.html').then(response => response.text()),
+    fetch('/components/footer.html').then(response => response.text()),
 ]).then(([headerData, footerData, blogsData]) => {
     // Insert the content
     document.getElementById('header-placeholder').innerHTML = headerData;
