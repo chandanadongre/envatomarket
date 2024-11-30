@@ -26,7 +26,7 @@
                         Build Your Dream<br>Swimming Pool
                     </h1>
                     
-                    <a href="components/blog.html" class="bg-cyan-500 mt-4 text-white px-8 py-4 font-semibold hover:bg-cyan-600 transition-all duration-300">
+                    <a href="components//components/blogs.html" class="bg-cyan-500 mt-4 text-white px-8 py-4 font-semibold hover:bg-cyan-600 transition-all duration-300">
                         DISCOVER MORE
                     </a>
                 </div>
@@ -53,9 +53,14 @@
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                 </p>
-                <button class="bg-yellow-400 mt-4 text-white px-6 py-3 font-semibold hover:bg-cyan-600 transition-all duration-300" onclick="window.location.href='components/about.html';">READ MORE</button>
+                <p class="text-cyan-600 text-xs font-italic mt-6">
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </p>
+                <button class="bg-yellow-500 mt-4 text-white px-6 py-3 font-semibold hover:bg-cyan-600 transition-all duration-300" onclick="window.location.href='components/about.html';">READ MORE</button>
             </div>
-            <div class="container mx-auto px-4 py-12">
+            <div class="container mx-auto px-4 py-2">
                 <div class="bg-black shadow-md  p-8 max-w-lg mx-auto">
                     <h2 class="text-white font-bold text-4xl text-center">Request A Quote</h2>
                   <form id="contactForm" class="space-y-6 mt-4">
@@ -133,23 +138,83 @@
             </div>
         </div>
     </div>
+     <!-- CTA  -->
+     <div class="relative h-screen font-serif">
+        <!-- Background Image -->
+        <img class="absolute inset-0 w-full h-full object-cover transition-all duration-500 ease-in-out" src="img/bg1.png" alt="Background">
+        
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-20">
+            <div class="flex flex-col lg:flex-row justify-between h-full px-6 sm:px-12 py-8 sm:py-16 space-y-8 lg:space-y-0">
+                
+                <!-- Left Column -->
+                <div class="flex flex-col justify-start space-y-6 lg:w-1/2">
+                    <p class="text-yellow-400 uppercase text-xs sm:text-sm mt-12 lg:mt-24 font-semibold tracking-wide">
+                        ------------ ECO FRIENDLY
+                    </p>
+                    <h3 class="text-white font-bold text-2xl sm:text-4xl lg:text-5xl leading-snug">
+                        Benefits Of An Indoor Swimming Pool Premise
+                    </h3>
+                    <a href="components/about.html" class="mt-8 lg:mt-12 bg-yellow-500 text-white px-4 py-2 sm:px-6 sm:py-3 font-semibold rounded hover:bg-cyan-400 transition-all duration-300 w-fit">
+                        LEARN MORE
+                    </a>
+                </div>
+                
+                <!-- Right Column -->
+                <div class="bg-white bg-opacity-90 rounded-lg shadow-lg p-6 sm:p-8 lg:w-2/5">
+                    <h2 class="text-black font-extrabold text-xl sm:text-2xl lg:text-3xl mt-4">
+                        Top Reasons To Contact Us Today!
+                    </h2>
+                    <ul class="mt-6 space-y-4">
+                        <li class="flex items-start">
+                            <span class="text-xl sm:text-2xl font-bold text-black mr-4">01</span>
+                            <span class="text-gray-700 text-sm sm:text-base">
+                                <strong>600+</strong> Pool Industry Design Awards
+                            </span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl sm:text-2xl font-bold text-black mr-4">02</span>
+                            <span class="text-gray-700 text-sm sm:text-base">
+                                <strong>Third Generation</strong> Swimming Pool Builder
+                            </span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl sm:text-2xl font-bold text-black mr-4">03</span>
+                            <span class="text-gray-700 text-sm sm:text-base">
+                                Nationally <strong>Recognized and Respected</strong>
+                            </span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl sm:text-2xl font-bold text-black mr-4">04</span>
+                            <span class="text-gray-700 text-sm sm:text-base">
+                                Over <strong>60,000</strong> Quality Swimming Pools
+                            </span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl sm:text-2xl font-bold text-black mr-4">05</span>
+                            <span class="text-gray-700 text-sm sm:text-base">
+                                <strong>Free</strong> in-home Consultation!
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+         <!-- SERVICES  -->
     <div>
-        <h2 class="text-center text-black text-4xl font-bold font-serif">Our Services</h2>
+        <h2 class="text-center text-black text-4xl mt-28 font-bold font-serif">Our Services</h2>
         <section class="bg-white py-10 font-serif">
           <div class="max-w-7xl mx-auto px-4">
-            <div class="relative flex items-center space-x-4">
+            <div class="relative flex space-x-4">
               <!-- Left navigation button -->
               <button id="scrollLeft" class="text-black text-3xl">
                 &lt;
               </button>
-      
               <!-- Scrollable container for services -->
               <div id="serviceContainer" class="flex gap-4 overflow-hidden snap-x snap-mandatory">
                 <!-- Service Cards -->
-                <div class="text-center p-6 snap-start flex-shrink-0 bg-black text-white w-full sm:w-1/2 lg:w-1/4">
-                    <div class="mb-4 flex justify-center">
-                        <i data-lucide="droplets" class="w-16 text-white hover:text-yellow-400"></i>
-                    </div>
+                <div class="p-6 snap-start flex-shrink-0 bg-black text-white w-full sm:w-1/2 lg:w-1/4">
                     <img src="img/pool.png" class="mb-2 w-1/4 mx-auto" onclick="window.location.href='#';"/>
                     <h3 class="text-lg font-semibold mb-4 hover:text-yellow-400" onclick="window.location.href='#';">
                         NEW POOLS
@@ -158,11 +223,7 @@
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
                 </div>
-      
-                <div class="text-center p-6 snap-start flex-shrink-0 bg-black text-white w-full sm:w-1/2 lg:w-1/4">
-                    <div class="mb-4 flex justify-center">
-                        <i data-lucide="droplets" class="w-16 text-white hover:text-yellow-400"></i>
-                    </div>
+                <div class="p-6 snap-start flex-shrink-0 bg-black text-white w-full sm:w-1/2 lg:w-1/4">
                     <img src="img/landscaping.jpg" class="mb-2 w-1/4 mx-auto" onclick="window.location.href='#';"/>
                     <h3 class="text-lg font-semibold mb-4 hover:text-yellow-400" onclick="window.location.href='#';">
                         LANDSCAPING
@@ -171,11 +232,7 @@
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
                 </div>
-      
-                <div class="text-center p-6 snap-start flex-shrink-0 bg-black text-white w-full sm:w-1/2 lg:w-1/4">
-                    <div class="mb-4 flex justify-center">
-                        <i data-lucide="droplets" class="w-16 text-white hover:text-yellow-400"></i>
-                    </div>
+                <div class=" p-6 snap-start flex-shrink-0 bg-black text-white w-full sm:w-1/2 lg:w-1/4">
                     <img src="./img/repair.png" class="mb-2 w-1/4 mx-auto" onclick="window.location.href='#';"/>
                     <h3 class="text-lg font-semibold mb-4 hover:text-yellow-400" onclick="window.location.href='#';">
                         REPAIR
@@ -184,11 +241,7 @@
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
                 </div>
-      
-                <div class="text-center p-6 snap-start flex-shrink-0 bg-black text-white w-full sm:w-1/2 lg:w-1/4">
-                    <div class="mb-4 flex justify-center">
-                        <i data-lucide="droplets" class="w-16 text-white hover:text-yellow-400"></i>
-                    </div>
+                <div class=" p-6 snap-start flex-shrink-0 bg-black text-white w-full sm:w-1/2 lg:w-1/4">
                     <img src="./img/remodel.png" class="mb-2 w-1/4 mx-auto" onclick="window.location.href='#';"/>
                     <h3 class="text-lg font-semibold mb-4 hover:text-yellow-400" onclick="window.location.href='#';">
                         REMODEL
@@ -197,10 +250,7 @@
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
                 </div>
-                <div class="text-center p-6 snap-start flex-shrink-0 bg-black text-white w-full sm:w-1/2 lg:w-1/4">
-                    <div class="mb-4 flex justify-center">
-                        <i data-lucide="droplets" class="w-16 text-white hover:text-yellow-400"></i>
-                    </div>
+                <div class=" p-6 snap-start flex-shrink-0 bg-black text-white w-full sm:w-1/2 lg:w-1/4">
                     <img src="./img/products.png" class="mb-2 w-1/4 mx-auto" onclick="window.location.href='#';"/>
                     <h3 class="text-lg font-semibold mb-4 hover:text-yellow-400" onclick="window.location.href='#';">
                         PRODUCTS
@@ -208,10 +258,8 @@
                     <p class="text-gray-400 text-sm">
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
-                </div>
-                
+                </div>  
             </div>
-      
               <!-- Right navigation button -->
             <button id="scrollRight" class="text-black text-3xl ">
                 &gt;
@@ -224,10 +272,123 @@
             </button>
         </div> 
         </section>
+    </div>    
+
+    <!-- Reviews -->
+    <div class="flex flex-col items-center text-center mt-12">
+        <div>
+            <h2 class="text-center text-black text-3xl sm:text-4xl font-bold font-serif">What customers Say?</h2>
+        </div>
+        <div class="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto">
+                <i class="fa-solid fa-quote-left text-green-500 text-2xl"></i>
+                <div class="review-slider relative w-full bg-gray-100 py-12 text-center">
+                    <!-- Review Container -->
+                    <div id="reviewContainer" class="text-gray-800 transition-opacity duration-1000 ease-in-out opacity-100">
+                        <!-- Review content will be populated here by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full p-4 sm:p-6 -mt-60">
+            <div class="aspect-video w-full">
+                <iframe
+                    title="vimeo-player"
+                    src="https://player.vimeo.com/video/61014526?h=4bf54cfa7a"
+                    class="w-full h-full"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="aspect-video w-full">
+                <iframe
+                    title="vimeo-player"
+                    src="https://player.vimeo.com/video/61014526?h=4bf54cfa7a"
+                    class="w-full h-full"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
     </div>
-
-
-
+    <!-- blog page  -->
+    <div class="bg-black text-white">
+        <div class="mt-24">
+          <h2 class="text-center text-white text-4xl font-bold font-serif ">Our Blogs</h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-8 mt-12">
+          <a href="/components/blogs.html" class="group">
+            <img src="/img/blog1.png" alt="Blog 1" class="w-full h-full object-cover group-hover:opacity-90 transition-opacity duration-300">
+          </a>
+          <a href="/components/blogs.html" class="group">
+            <img src="/img/blog2.png" alt="Blog 2" class="w-full h-full object-cover group-hover:opacity-90 transition-opacity duration-300">
+          </a>
+          <a href="/components/blogs.html" class="group">
+            <img src="/img/blog3.png" alt="Blog 3" class="w-full h-full object-cover group-hover:opacity-90 transition-opacity duration-300">
+          </a>
+          <a href="/components/blogs.html" class="group">
+            <img src="/img/blog4.png" alt="Blog 4" class="w-full h-full object-cover group-hover:opacity-90 transition-opacity duration-300">
+          </a>
+          <a href="/components/blogs.html" class="group">
+            <img src="/img/blog5.png" alt="Blog 5" class="w-full h-full object-cover group-hover:opacity-90 transition-opacity duration-300">
+          </a>
+          <a href="/components/blogs.html" class="group">
+            <img src="/img/blog6.png" alt="Blog 6" class="w-full h-full object-cover group-hover:opacity-90 transition-opacity duration-300">
+          </a>
+        </div>
+        <div class="flex justify-center mt-12 items-center pb-12">
+          <button class="bg-yellow-500 text-black px-8 py-4 font-semibold hover:bg-cyan-600 hover:text-white transition-all duration-300">
+            MORE BLOGS ->
+          </button>
+        </div>
+    </div>
+      
+    <!-- FAQ  -->
+    <div class="container mx-auto px-4 py-10">
+        <div>
+            <h2 class="text-center text-black text-4xl font-bold font-serif">Frequently Asked Questions</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+            <div>
+                <img src="/img/bg2.jpeg" alt="FAQ Image" class="rounded-lg shadow-lg">
+            </div>
+            <div>
+                <div class="space-y-4">
+                <!-- Question 1 -->
+                <div class="border rounded-lg">
+                    <button class="flex justify-between items-center w-full p-4 bg-green-400 text-white font-medium" onclick="toggleFAQ(1)">
+                    What is the return policy and how does it work?
+                    <span id="icon-1">-</span>
+                    </button>
+                    <div id="faq-1" class="p-4 bg-white text-gray-700">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate, doloribus! Ea tenetur quisquam magni totam omnis?
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate, doloribus! Ea tenetur quisquam magni totam omnis
+                    </div>
+                </div>
+                <!-- Question 2 -->
+                <div class="border rounded-lg">
+                    <button class="flex justify-between items-center w-full p-4 bg-gray-200 text-gray-700 font-medium" onclick="toggleFAQ(2)">
+                    How do I track my order?
+                    <span id="icon-2">+</span>
+                    </button>
+                    <div id="faq-2" class="hidden p-4 bg-white text-gray-700">
+                    You can track your order through the tracking link provided in the confirmation email.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate, doloribus! Ea tenetur quisquam magni totam omnis
+                    </div>
+                </div>
+                <!-- Question 3 -->
+                <div class="border rounded-lg">
+                    <button class="flex justify-between items-center w-full p-4 bg-gray-200 text-gray-700 font-medium" onclick="toggleFAQ(3)">
+                    How can I contact customer support, Is it available 24/7?
+                    <span id="icon-3">+</span>
+                    </button>
+                    <div id="faq-3" class="hidden p-4 bg-white text-gray-700">
+                    Yes, our customer support is available 24/7. Contact us via email or phone for assistance.
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="text-center justify-center">
         <p class="text-black font-serif font-italic text-2xl">We Are Ready To </p>
         <p class="text-black font-serif font-bold text-5xl mt-2">Serve You</p>
@@ -237,6 +398,15 @@
             </button>
         </div> 
     </div>  
+     <!-- Sponsors -->
+     <div class="bg-gray-200 mt-12 text-gray-600 text-center  flex flex-wrap justify-center items-center gap-6">
+        <img src="/img/sponsors1-removebg-preview.png" class="h-auto max-h-24 w-auto max-w-full">
+        <img src="/img/sponsors2-removebg-preview.png" class="h-auto max-h-24 w-auto max-w-full">
+        <img src="/img/sponsors3-removebg-preview.png" class="h-auto max-h-24 w-auto max-w-full">
+        <img src="/img/sponsors4-removebg-preview.png" class="h-auto max-h-24 w-auto max-w-full">
+        <img src="/img/sponsors5-removebg-preview.png" class="h-auto max-h-24 w-auto max-w-full">
+        <img src="/img/sponsors6-removebg-preview.png" class="h-auto max-h-24 w-auto max-w-full">
+    </div>
     <div id="footer"></div>
 </body>
 </html>
