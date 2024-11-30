@@ -163,4 +163,4 @@ function toggleFAQ(id) {
       faq.previousElementSibling.classList.replace('bg-green-400', 'bg-gray-200');
       faq.previousElementSibling.classList.replace('text-white', 'text-gray-700');
     }
-  }
+}
