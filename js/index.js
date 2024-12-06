@@ -103,12 +103,35 @@ function initializeMenu() {
         }
     });
 }
+
+// Handle form validation
 const form = document.getElementById('contactForm');
-    if (form) {
-        form.addEventListener('submit', (event) => {
-            if (!form.checkValidity()) {
-                event.preventDefault();
-                alert('Please fill out all required fields before submitting.');
-            }
-        });
+if (form) {
+    form.addEventListener('submit', (event) => {
+        if (!form.checkValidity()) {
+            event.preventDefault();
+            alert('Please fill out all required fields before submitting.');
+        }
+    });
 }
+
+//counter
+document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+        const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / 100;
+  
+            if (count < target) {
+              counter.innerText = Math.ceil(count + increment);
+              setTimeout(updateCount, 30); // Adjust the speed here
+            } else {
+              counter.innerText = target;
+            }
+          };
+        updateCount();
+    });
+});
+    
