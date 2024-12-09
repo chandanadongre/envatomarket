@@ -166,9 +166,9 @@ function toggleFAQ(id) {
 }
 
 //Home page navigation dynamic link
-    const homeLink = document.querySelector('#homeLink');
-    if (window.location.pathname === '/') {
-        homeLink.href = '/index.html';
+const homeLink = document.querySelector('#homeLink');
+    if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+        homeLink.href = '/index.html';  // On homepage, link to root index.html
     } else {
-        homeLink.href = '../index.html';
+        homeLink.href = '../index.html';  // On other pages, link to index.html from one level up
     }
