@@ -167,11 +167,13 @@ function toggleFAQ(id) {
 
 //Home page navigation dynamic link
 const homeLink = document.querySelector('#homeLink');
+
+    // Determine current path
     const currentPath = window.location.pathname;
 
     // Check if the current page is the homepage
     if (currentPath === '/index.html' || currentPath === '/' || currentPath.endsWith('index.html')) {
-        homeLink.href = '#';  // Stay on the same page if already on home
+        homeLink.addEventListener('click', (e) => e.preventDefault());  // Disable navigation
     } else {
-        homeLink.href = '/index.html';  // Navigate to homepage if on other pages
+        homeLink.href = '/index.html';  // Correct homepage link for other pages
     }
