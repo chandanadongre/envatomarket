@@ -52,12 +52,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
-function initializeMenu() {
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
+document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.querySelector('.menu-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
     const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
 
-    // Toggle mobile menu visibility
+    // Mobile Menu Toggle
     if (menuBtn && mobileMenu) {
         menuBtn.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -65,29 +65,20 @@ function initializeMenu() {
         });
     }
 
-    // Mobile dropdown functionality
+    // Mobile Dropdown Functionality
     mobileDropdownToggles.forEach(toggle => {
-        let clickedOnce = false;
-
         toggle.addEventListener('click', (e) => {
-            const content = toggle.nextElementSibling;
-            const arrow = toggle.querySelector('span');
-
-            if (clickedOnce) {
-                window.location.href = toggle.getAttribute('href');
-                return;
-            }
-
             e.preventDefault();
-            e.stopPropagation();
+            const content = toggle.nextElementSibling;
+            const arrow = toggle.querySelector('.arrow');
 
             // Close other dropdowns
             mobileDropdownToggles.forEach(otherToggle => {
                 if (otherToggle !== toggle) {
                     const otherContent = otherToggle.nextElementSibling;
-                    const otherArrow = otherToggle.querySelector('span');
-                    otherContent?.classList.add('hidden');
-                    otherArrow?.style.transform = 'rotate(0deg)';
+                    const otherArrow = otherToggle.querySelector('.arrow');
+                    if (otherContent) otherContent.classList.add('hidden');
+                    if (otherArrow) otherArrow.style.transform = 'rotate(0deg)';
                 }
             });
 
@@ -96,14 +87,53 @@ function initializeMenu() {
                 content.classList.toggle('hidden');
                 arrow.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
             }
-
-            clickedOnce = true;
-            setTimeout(() => (clickedOnce = false), 500); // Reset after brief delay
         });
     });
-}
 
-document.addEventListener('DOMContentLoaded', initializeMenu);
+    // Desktop Dropdown Logic
+    const serviceLink = document.querySelector('.service-link');
+    const serviceDropdown = document.querySelector('.service-dropdown');
+    const allDropdowns = document.querySelectorAll('.desktop-dropdown');
+
+    if (serviceLink && serviceDropdown) {
+        serviceLink.addEventListener('mouseenter', () => {
+            closeAllDropdowns();
+            serviceDropdown.classList.remove('hidden');
+        });
+
+        serviceDropdown.addEventListener('mouseenter', () => {
+            serviceDropdown.classList.remove('hidden');
+        });
+
+        serviceDropdown.addEventListener('mouseleave', () => {
+            serviceDropdown.classList.add('hidden');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!serviceLink.contains(e.target) && !serviceDropdown.contains(e.target)) {
+                closeAllDropdowns();
+            }
+        });
+    }
+
+    // Close All Desktop Dropdowns
+    function closeAllDropdowns() {
+        allDropdowns.forEach(dropdown => dropdown.classList.add('hidden'));
+    }
+
+    // Close Mobile Menu When Clicking Outside
+    document.addEventListener('click', (e) => {
+        if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+            mobileMenu.classList.add('hidden');
+            mobileDropdownToggles.forEach(toggle => {
+                const content = toggle.nextElementSibling;
+                const arrow = toggle.querySelector('.arrow');
+                if (content) content.classList.add('hidden');
+                if (arrow) arrow.style.transform = 'rotate(0deg)';
+            });
+        }
+    });
+});
 
 
 // Handle form validation
