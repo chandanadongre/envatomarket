@@ -168,12 +168,11 @@ function toggleFAQ(id) {
 //Home page navigation dynamic link
 const homeLink = document.querySelector('#homeLink');
 
-    // Determine current path
-    const currentPath = window.location.pathname;
+    // Adjust path for GitHub Pages
+    const isOnHomePage = window.location.pathname.endsWith('/index.html') || window.location.pathname === '/envatomarket/' || window.location.pathname === '/envatomarket';
 
-    // Check if the current page is the homepage
-    if (currentPath === '/index.html' || currentPath === '/' || currentPath.endsWith('index.html')) {
-        homeLink.addEventListener('click', (e) => e.preventDefault());  // Disable navigation
+    if (isOnHomePage) {
+        homeLink.addEventListener('click', (e) => e.preventDefault()); // Disable link
     } else {
-        homeLink.href = '/index.html';  // Correct homepage link for other pages
+        homeLink.href = '/envatomarket/index.html'; // Correct path for navigation
     }
