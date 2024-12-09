@@ -164,3 +164,11 @@ function toggleFAQ(id) {
       faq.previousElementSibling.classList.replace('text-white', 'text-gray-700');
     }
 }
+
+//Home page navigation dynamic link
+    const homeLink = document.querySelector('#homeLink');
+    if (window.location.pathname === '/') {
+        homeLink.href = '/index.html';
+    } else {
+        homeLink.href = '../index.html';
+    }
