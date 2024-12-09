@@ -167,12 +167,11 @@ function toggleFAQ(id) {
 
 //Home page navigation dynamic link
 const homeLink = document.querySelector('#homeLink');
+    const currentPath = window.location.pathname;
 
-    // Adjust path for GitHub Pages
-    const isOnHomePage = window.location.pathname.endsWith('/index.html') || window.location.pathname === '/envatomarket/' || window.location.pathname === '/envatomarket';
-
-    if (isOnHomePage) {
-        homeLink.addEventListener('click', (e) => e.preventDefault()); // Disable link
+    // Correct GitHub Pages navigation path
+    if (currentPath === '/envatomarket/' || currentPath === '/envatomarket/index.html') {
+        homeLink.href = '#'; // Disable link when already on home page
     } else {
-        homeLink.href = '/envatomarket/index.html'; // Correct path for navigation
+        homeLink.href = '/envatomarket/index.html'; // Navigate to home from other pages
     }
