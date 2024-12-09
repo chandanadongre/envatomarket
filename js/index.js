@@ -52,11 +52,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
-const menuBtn = document.querySelector('.menu-btn');
-    const mobileMenu = document.querySelector('.mobile-menu');
+function initializeMenu() {
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
     const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+    const nonDropdownLinks = document.querySelectorAll('#mobile-menu > a:not(.mobile-dropdown-toggle)');
 
-    // Mobile Menu Toggle
     if (menuBtn && mobileMenu) {
         menuBtn.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -64,18 +65,18 @@ const menuBtn = document.querySelector('.menu-btn');
         });
     }
 
-    // Mobile Dropdown Functionality
     mobileDropdownToggles.forEach(toggle => {
         toggle.addEventListener('click', (e) => {
             e.preventDefault();
+            e.stopPropagation();
             const content = toggle.nextElementSibling;
-            const arrow = toggle.querySelector('.arrow');
-
+            const arrow = toggle.querySelector('span');
+            
             // Close other dropdowns
             mobileDropdownToggles.forEach(otherToggle => {
                 if (otherToggle !== toggle) {
                     const otherContent = otherToggle.nextElementSibling;
-                    const otherArrow = otherToggle.querySelector('.arrow');
+                    const otherArrow = otherToggle.querySelector('span');
                     if (otherContent) otherContent.classList.add('hidden');
                     if (otherArrow) otherArrow.style.transform = 'rotate(0deg)';
                 }
@@ -89,50 +90,19 @@ const menuBtn = document.querySelector('.menu-btn');
         });
     });
 
-    // Desktop Dropdown Logic
-    const serviceLink = document.querySelector('.service-link');
-    const serviceDropdown = document.querySelector('.service-dropdown');
-    const allDropdowns = document.querySelectorAll('.desktop-dropdown');
-
-    if (serviceLink && serviceDropdown) {
-        serviceLink.addEventListener('mouseenter', () => {
-            closeAllDropdowns();
-            serviceDropdown.classList.remove('hidden');
-        });
-
-        serviceDropdown.addEventListener('mouseenter', () => {
-            serviceDropdown.classList.remove('hidden');
-        });
-
-        serviceDropdown.addEventListener('mouseleave', () => {
-            serviceDropdown.classList.add('hidden');
-        });
-
-        document.addEventListener('click', (e) => {
-            if (!serviceLink.contains(e.target) && !serviceDropdown.contains(e.target)) {
-                closeAllDropdowns();
-            }
-        });
-    }
-
-    // Close All Desktop Dropdowns
-    function closeAllDropdowns() {
-        allDropdowns.forEach(dropdown => dropdown.classList.add('hidden'));
-    }
-
-    // Close Mobile Menu When Clicking Outside
+    // Close menu when clicking outside
     document.addEventListener('click', (e) => {
-        if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+        if (mobileMenu && menuBtn && !mobileMenu.contains(e.target) && e.target !== menuBtn) {
             mobileMenu.classList.add('hidden');
             mobileDropdownToggles.forEach(toggle => {
                 const content = toggle.nextElementSibling;
-                const arrow = toggle.querySelector('.arrow');
+                const arrow = toggle.querySelector('span');
                 if (content) content.classList.add('hidden');
                 if (arrow) arrow.style.transform = 'rotate(0deg)';
             });
         }
     });
-
+}
 // Handle form validation
 const form = document.getElementById('contactForm');
 if (form) {
