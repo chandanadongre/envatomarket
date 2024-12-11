@@ -165,13 +165,4 @@ function toggleFAQ(id) {
     }
 }
 
-//Home page navigation dynamic link
-const homeLink = document.querySelector('#homeLink');
-    const currentPath = window.location.pathname;
 
-    // Correct GitHub Pages navigation path
-    if (currentPath === '/envatomarket/' || currentPath === '/envatomarket/index.html') {
-        homeLink.href = '#'; // Disable link when already on home page
-    } else {
-        homeLink.href = '/envatomarket/index.html'; // Navigate to home from other pages
-    }
