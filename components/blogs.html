@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bassein | Blogs</title>
+    <link rel="icon" type="image/png" href="../img/icon.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body class="bg-gray-50 min-h-screen pt-40">
+    <div id="header"></div>
+
+    <div class="relative font-serif bg-gradient-to-r from-blue-100 via-white to-blue-100 py-24 sm:py-32 px-8 sm:px-16 lg:px-32">
+        <div class="absolute inset-0 bg-[url('../img/bg3.jpeg')] bg-cover bg-center opacity-80"></div>
+        <div class="relative max-w-7xl mx-auto text-center">
+            <h1 class="text-white font-bold text-6xl sm:text-4xl lg:text-5xl">Blogs</h1>
+            <p class="text-gray-200  sm:text-base mt-4">
+                <a href="../index.html" class="hover:font-bold">Home</a> | Blogs
+            </p>
+        </div>
+    </div>
+    <main class="py-16">
+        <div class="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 max-w-[1920px] mx-auto">
+            <!-- Blog Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Blog Card 1 -->
+                <a href="../components/blog-post.html" class="group">
+                    <div class="bg-black overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="../img/blog1.png" class="blog-image w-full h-full object-cover">
+                            <div class="absolute top-4 left-4">
+                                <span class="px-4 py-2 bg-white/90 text-sm font-medium text-gray-700">
+                                    Round
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <h2 class="text-xl font-bold text-white group-hover:text-green-600">
+                                    The Future of Web Development
+                                </h2>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white group-hover:text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </svg>
+                            </div>
+                            <p class="text-white mb-4 line-clamp-2">
+                                Exploring the latest trends and technologies shaping the future of web development, from WebAssembly to Edge Computing.
+                            </p>
+                            <div class="text-sm text-white">5 min read</div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Blog Card 3 -->
+                <a href="../components/blog-post.html" class="group">
+                    <div class="bg-white overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="../img/blog4.png" class="blog-image w-full h-full object-cover">
+                            <div class="absolute top-4 left-4">
+                                <span class="px-4 py-2 bg-white/90 text-sm font-medium text-gray-700">
+                                    Rectangle
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <h2 class="text-xl font-bold text-gray-900 group-hover:text-green-600">
+                                    JavaScript Performance Tips
+                                </h2>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 group-hover:text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </svg>
+                            </div>
+                            <p class="text-gray-600 mb-4 line-clamp-2">
+                                Learn how to optimize your JavaScript applications for better performance and user experience.
+                            </p>
+                            <div class="text-sm text-gray-500">6 min read</div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Blog Card 4 -->
+                <a href="../components/blog-post.html" class="group">
+                    <div class="bg-white overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="../img/blog5.png" class="blog-image w-full h-full object-cover">
+                            <div class="absolute top-4 left-4">
+                                <span class="px-4 py-2 bg-white/90 text-sm font-medium text-gray-700">
+                                    Classic
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <h2 class="text-xl font-bold text-gray-900 group-hover:text-green-600">
+                                    UI/UX Design Principles
+                                </h2>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 group-hover:text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </svg>
+                            </div>
+                            <p class="text-gray-600 mb-4 line-clamp-2">
+                                Essential design principles every developer should know to create user-friendly interfaces.
+                            </p>
+                            <div class="text-sm text-gray-500">4 min read</div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Blog Card 2 -->
+                <a href="../components/blog-post.html" class="group">
+                    <div class="bg-black overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="../img/blog2.png" class="blog-image w-full h-full object-cover">
+                            <div class="absolute top-4 left-4">
+                                <span class="px-4 py-2 bg-white/90 text-sm font-medium text-gray-700">
+                                    Square
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <h2 class="text-xl font-bold text-white group-hover:text-green-600">
+                                    Mastering CSS Grid Layout
+                                </h2>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white group-hover:text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </svg>
+                            </div>
+                            <p class="text-white mb-4 line-clamp-2">
+                                A comprehensive guide to creating complex layouts with CSS Grid, including practical examples and best practices.
+                            </p>
+                            <div class="text-sm text-white">7 min read</div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Blog Card 5 -->
+                <a href="../components/blog-post.html" class="group">
+                    <div class="bg-black overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="../img/blog1.png" class="blog-image w-full h-full object-cover">
+                            <div class="absolute top-4 left-4">
+                                <span class="px-4 py-2 bg-white/90 text-sm font-medium text-gray-700">
+                                    Kidney
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <h2 class="text-xl font-bold text-white group-hover:text-green-600">
+                                    Getting Started with TypeScript
+                                </h2>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white group-hover:text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </svg>
+                            </div>
+                            <p class="text-white mb-4 line-clamp-2">
+                                A beginner-friendly introduction to TypeScript and its benefits in modern web development.
+                            </p>
+                            <div class="text-sm text-white">8 min read</div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Blog Card 6 -->
+                <a href="../components/blog-post.html" class="group">
+                    <div class="bg-white overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="../img/blog6.png" class="blog-image w-full h-full object-cover">
+                            <div class="absolute top-4 left-4">
+                                <span class="px-4 py-2 bg-white/90 text-sm font-medium text-gray-700">
+                                    Customized
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <h2 class="text-xl font-bold text-gray-700 group-hover:text-green-600">
+                                    Getting Started with TypeScript
+                                </h2>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white group-hover:text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </svg>
+                            </div>
+                            <p class="text-gray-700 mb-4 line-clamp-2">
+                                A beginner-friendly introduction to TypeScript and its benefits in modern web development.
+                            </p>
+                            <div class="text-sm text-gray-700">8 min read</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+      
+    <div id="footer"></div>
+    <script src="../js/index.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bassein | Contact Us</title>
+    <link rel="icon" type="image/png" href="../img/icon.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body class="bg-gray-50 min-h-screen pt-40">
+    <div id="header"></div>
+
+    <div class="relative font-serif bg-gradient-to-r from-blue-100 via-white to-blue-100 py-16 sm:py-24 px-4 sm:px-8 lg:px-16">
+        <div class="absolute inset-0 bg-[url('../img/contact_bg.png')] bg-cover bg-center opacity-90"></div>
+        <div class="relative max-w-7xl mx-auto flex flex-col items-center text-center">
+            <h1 class="text-white font-bold text-3xl sm:text-4xl lg:text-5xl">Contacts</h1>
+            <p class="text-gray-200 text-sm sm:text-base mt-4">
+                <a href="../index.html" class="hover:font-bold">Home</a> | Contacts
+            </p>
+        </div>
+    </div>
+
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 font-serif">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div>
+                <p class="text-yellow-400 uppercase text-sm font-semibold tracking-wide">------------ Contact Info</p>
+                <h2 class="text-black font-bold text-3xl sm:text-4xl lg:text-5xl mt-6">We Are Open To Discuss</h2>
+                <p class="text-gray-700 mt-6">
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </p>
+                <div class="mt-8 space-y-6">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 flex items-center justify-center bg-green-100 rounded-full">
+                            <i class="fas fa-home text-green-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Address</h3>
+                            <p class="text-gray-600">123, New Lenox Chicago, IL 60606</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 flex items-center justify-center bg-green-100 rounded-full">
+                            <i class="fas fa-envelope text-green-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Email</h3>
+                            <p class="text-gray-600">info@hradviser.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 flex items-center justify-center bg-green-100 rounded-full">
+                            <i class="fas fa-phone text-green-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Phone</h3>
+                            <p class="text-gray-600">+383321132</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:mt-0 mt-8">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d400841.3895676304!2d-88.06258467811114!3d41.82970554674363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2c3cd0f4cbed%3A0xafe0a6ad09c0c000!2sChicago%2C%20IL%2C%20USA!5e0!3m2!1sen!2sin!4v1732353339766!5m2!1sen!2sin"
+                    class="w-full h-[400px] rounded-lg shadow-lg"
+                    style="border:0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="mt-16 text-center">
+            <h2 class="font-serif font-bold text-black text-3xl sm:text-4xl lg:text-5xl">Get In Touch</h2>
+        </div>
+
+        <div class="max-w-2xl mx-auto mt-12">
+            <form id="contactForm" class="space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                            required
+                            class="w-full border bg-gray-100 px-4 py-3 rounded-md text-gray-700 focus:ring-2 focus:ring-green-500 focus:outline-none transition-all duration-300"
+                        />
+                    </div>
+                    <div>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required
+                            class="w-full border bg-gray-100 px-4 py-3 rounded-md text-gray-700 focus:ring-2 focus:ring-green-500 focus:outline-none transition-all duration-300"
+                        />
+                    </div>
+                </div>
+                <div>
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Enter your message"
+                        required
+                        class="w-full border bg-gray-100 px-4 py-3 rounded-md text-gray-700 focus:ring-2 focus:ring-green-500 focus:outline-none h-32 transition-all duration-300"
+                    ></textarea>
+                </div>
+                <div class="flex items-start space-x-3">
+                    <input
+                        type="checkbox"
+                        id="agree"
+                        name="agree"
+                        required
+                        class="mt-1 h-5 w-5 text-green-600 border-gray-300 rounded focus:ring-green-500"
+                    />
+                    <label for="agree" class="text-gray-700 text-sm">
+                        I agree that my submitted data is being collected and stored.
+                    </label>
+                </div>
+                <div>
+                    <button
+                        type="submit"
+                        class="w-full bg-green-600 text-white font-medium py-3 rounded-md hover:bg-green-700 transition-all duration-300"
+                    >
+                        Submit Request
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script src="../js/index.js" defer></script>
+</body>
+</html>
