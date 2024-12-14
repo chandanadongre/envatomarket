@@ -165,4 +165,22 @@ function toggleFAQ(id) {
     }
 }
 
+//why choose us counting values
+const counters = document.querySelectorAll('.count');
+        const speed = 50; // Adjust speed for counter
 
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+            let count = 0;
+
+            function updateCount() {
+                if (count < target) {
+                    count += Math.ceil(target / speed);
+                    counter.innerText = count;
+                    setTimeout(updateCount, 10);
+                } else {
+                    counter.innerText = target;
+                }
+            }
+            updateCount();
+        });
