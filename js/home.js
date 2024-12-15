@@ -55,34 +55,12 @@ function updateSliderImage() {
     sliderContainer.style.backgroundImage = `url('${sliderImages[currentImageIndex]}')`;
 }
 
-// Initialize slider when DOM is loaded
-document.addEventListener('DOMContentLoaded', initializeSlider);
 
-//services scroll bar
-const scrollLeftButton = document.getElementById("scrollLeft");
-const scrollRightButton = document.getElementById("scrollRight");
-const serviceContainer = document.getElementById("serviceContainer");
-    
-    scrollLeftButton.addEventListener("click", () => {
-      serviceContainer.scrollBy({
-        left: -serviceContainer.clientWidth,
-        behavior: "smooth"
-      });
-    });
-    
-    scrollRightButton.addEventListener("click", () => {
-      serviceContainer.scrollBy({
-        left: serviceContainer.clientWidth,
-        behavior: "smooth"
-    });
-});
-
-
-//dynamic review section
+// Dynamic review section
 const reviews = [
     {
         id: 1,
-        content: "This is definitely one of the best companies out there, and I would recommend it to anyone who is looking for fast quality services at affordable cost. Thanks for the amazing technical support and quality design!",
+        content: "This is definitely one of the best companies out there, and I would recommend it to anyone who is looking for fast quality service at an affordable cost. Thanks for the amazing technical support and quality design!",
         author: "MICHAEL MOORE",
         location: "LOS ANGELES, CA",
     },
@@ -100,21 +78,9 @@ const reviews = [
     },
     {
         id: 4,
-        content: "This is definitely one of the best companies out there, and I would recommend it to anyone who is looking for fast quality services at affordable cost. Thanks for the amazing technical support and quality design!",
-        author: "MICHAEL MOORE",
-        location: "LOS ANGELES, CA",
-    },
-    {
-        id: 5,
-        content: "Amazing service and exceptional attention to detail. The staff was extremely friendly and knowledgeable. Highly recommended!",
-        author: "SARAH SMITH",
-        location: "NEW YORK, NY",
-    },
-    {
-        id: 6,
-        content: "Professional and efficient team with incredible results. I am very satisfied with the work. Excellent quality!",
-        author: "DAVID JONES",
-        location: "CHICAGO, IL",
+        content: "Outstanding customer service, reliable and trustworthy. Would not hesitate to recommend them to others.",
+        author: "EMILY CLARK",
+        location: "SAN FRANCISCO, CA",
     },
 ];
 
@@ -122,31 +88,49 @@ let currentReviewIndex = 0;
 
 function showNextReview() {
     const reviewContainer = document.getElementById("reviewContainer");
-    
-    // Fade out current review
-    reviewContainer.classList.add("opacity-0"); 
-    
+
+    // Fade out current reviews
+    reviewContainer.classList.add("opacity-0");
+
     // After fading out, change the review content
     setTimeout(() => {
-        currentReviewIndex = (currentReviewIndex + 1) % reviews.length;  // Loop through the reviews array
-        const review = reviews[currentReviewIndex];
-        
-        // Update review container with new review content
+        currentReviewIndex = (currentReviewIndex + 2) % reviews.length; // Loop through reviews array two at a time
+
+        const review1 = reviews[currentReviewIndex];
+        const review2 = reviews[(currentReviewIndex + 1) % reviews.length];
+
+        // Update review container with two reviews
         reviewContainer.innerHTML = `
-            <p class="text-2xl italic mb-4">"${review.content}"</p>
-            <h4 class="text-lg font-semibold">${review.author}, <span class="text-gray-500">${review.location}</span></h4>
+            <div class="relative  p-6  flex flex-col items-center justify-center h-[300px] bg-cover bg-center" style="background-image: url('img/customer.png');">
+                <div class="absolute inset-0 bg-black opacity-70 "></div>
+                <p class="relative text-white text-lg italic mb-4 z-10">"${review1.content}"</p>
+                <h4 class="relative text-white font-semibold z-10">${review1.author}, <span class="text-gray-200">${review1.location}</span></h4>
+                <div class="flex justify-center mt-2 z-10">
+                    <span class="text-yellow-400">★★★★★</span>
+                </div>
+            </div>
+            <div class="relative  p-6  flex flex-col items-center justify-center h-[300px] bg-cover bg-center" style="background-image: url('img/customer2.jpeg');">
+                <div class="absolute inset-0 bg-black opacity-70 "></div>
+                <p class="relative text-white text-lg italic mb-4 z-10">"${review2.content}"</p>
+                <h4 class="relative text-white font-semibold z-10">${review2.author}, <span class="text-gray-200">${review2.location}</span></h4>
+                <div class="flex justify-center mt-2 z-10">
+                    <span class="text-yellow-400">★★★★★</span>
+                </div>
+            </div>
         `;
-        
-        // Fade in the new review
-        reviewContainer.classList.remove("opacity-0"); 
-    }, 500); // Fade duration
+
+        // Fade in new reviews
+        reviewContainer.classList.remove("opacity-0");
+    }, 500);
 }
 
-// Automatically slide reviews every 3 seconds
+// Automatically slide reviews every 6 seconds (2 reviews)
 setInterval(showNextReview, 3000);
 
-// Initialize with the first review
+// Initialize with the first two reviews
 showNextReview();
+
+
 
 //FAQ SCRIPT
 function toggleFAQ(id) {
@@ -184,3 +168,54 @@ const counters = document.querySelectorAll('.count');
             }
             updateCount();
         });
+
+        const container = document.getElementById("serviceContainer");
+        const leftArrow = document.getElementById("leftArrow");
+        const rightArrow = document.getElementById("rightArrow");
+    
+        let scrollAmount = 0;
+        const cardWidth = 300; // Approximate width of one card
+        const scrollInterval = 3000; // Scroll every 3 seconds
+        let autoScroll;
+    
+        // Scroll right function
+        function scrollRight() {
+            if (scrollAmount < container.scrollWidth - container.clientWidth) {
+                scrollAmount += cardWidth;
+            } else {
+                scrollAmount = 0; // Reset to the start
+            }
+            container.scrollTo({
+                left: scrollAmount,
+                behavior: "smooth"
+            });
+        }
+    
+        // Scroll left function
+        function scrollLeft() {
+            if (scrollAmount > 0) {
+                scrollAmount -= cardWidth;
+            } else {
+                scrollAmount = container.scrollWidth - container.clientWidth; // Go to end
+            }
+            container.scrollTo({
+                left: scrollAmount,
+                behavior: "smooth"
+            });
+        }
+    
+        // Add event listeners for manual scroll
+        leftArrow.addEventListener("click", scrollLeft);
+        rightArrow.addEventListener("click", scrollRight);
+    
+        // Auto-scroll every 3 seconds
+        function startAutoScroll() {
+            autoScroll = setInterval(scrollRight, scrollInterval);
+        }
+    
+        // Stop auto-scroll on hover and restart on mouse leave
+        container.addEventListener("mouseenter", () => clearInterval(autoScroll));
+        container.addEventListener("mouseleave", startAutoScroll);
+    
+        // Start the automatic scrolling on load
+        startAutoScroll();

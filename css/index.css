@@ -30,3 +30,10 @@
 .more-blogs-button {
   @apply bg-yellow-500 text-black px-8 py-4 font-semibold hover:bg-cyan-600 hover:text-white transition-all duration-300;
 }
+#serviceContainer {
+  cursor: grab;
+}
+
+#serviceContainer.cursor-grabbing {
+  cursor: grabbing;
+}

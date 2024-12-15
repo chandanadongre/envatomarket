@@ -11,7 +11,7 @@
 </head>
 <body class="bg-gray-50 min-h-screen pt-20 font-serif">
     <div id="header"></div>
-    <div class="relative max-w-7xl mx-auto items-center justify-center mt-12 font-serif px-8">
+    <div class="relative max-w-7xl mx-auto items-center justify-center mt-12 font-serif px-8  lg:ml-28 lg:mr-28 lg:pl-24 lg:pr-24">
         <div class="relative max-w-7xl mx-auto items-center justify-center mt-12 font-serif">
             <h1 class="text-black text-center font-bold text-3xl sm:text-4xl lg:text-5xl ">NEW POOL SERVICES</h1>
             <p class="text-cyan-600 text-center text-sm sm:text-base mt-4">
@@ -20,78 +20,64 @@
         </div>
     </div>
     
-    <!-- Content Section -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <!-- Content Section --> 
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6  lg:ml-28 lg:mr-28 lg:pl-24 lg:pr-24">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <article class="lg:col-span-2">
                 <div class="prose prose-invert max-w-none">
-                    <button class="mt-4 bg-yellow-500 text-white py-2 px-4 hover:bg-lime-600 transition" onclick="window.location.href='./contact.html';">BUY NOW</button>
+                    
                     <div class="relative h-80 mb-8">
                         <img src="../img/bg12.jpeg" alt="Project area view" class="absolute inset-0 w-full h-full object-cover" />
                     </div>
                     <p class="text-blue text-xl leading-relaxed mb-8">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lobortis, arcu in vestibulum facilisis, felis risus venenatis nunc, eget fringilla nisl lorem sed purus.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lobortis, arcu in vestibulum facilisis, felis risus venenatis nunc, eget fringilla nisl lorem sed purus.
                         Sed posuere tellus nec eros consequat, quis facilisis nunc malesuada. Integer vel ligula ut tortor hendrerit vehicula.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lobortis, arcu in vestibulum facilisis, felis risus venenatis nunc, eget fringilla nisl lorem sed purus.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lobortis, arcu in vestibulum facilisis, felis risus venenatis nunc, eget fringilla nisl lorem sed purus.
-                        Sed posuere tellus nec eros consequat, quis facilisis nunc malesuada. Integer vel ligula ut tortor hendrerit vehicula.
-                    
-                    </p>               
+                    </p> 
+                    <button class=" bg-cyan-600 text-white py-2 px-16 hover:bg-green-600 transition" onclick="window.location.href='./contact.html';">BUY NOW</button>              
                     <hr class="border-yellow-900/60 mb-4"> 
                     <div class="bg-white p-6 mb-4">
-                        <h2 class="text-2xl font-bold text-yellow-900/100 mb-4"> Features of This Service</h2>
-                        <ul class="space-y-4 text-yellow-900/100">
-                            <li class="flex items-start gap-2">
-                                <span class="inline-block w-2 h-2 bg-white mt-2"></span>
-                                <span>Ut aliquet, tortor ac feugiat vehicula, neque mi tincidunt orci.</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="inline-block w-2 h-2 bg-white mt-2"></span>
-                                <span>Curabitur fermentum quam in turpis commodo facilisis.</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="inline-block w-2 h-2 bg-white mt-2"></span>
-                                <span>Mauris maximus eros non magna suscipit feugiat.</span>
-                            </li>
-                        </ul>
-                    </div>    
-                    <hr class="border-yellow-900/60 mb-4">                    
-                    <p class="text-gray-500 mb-6">
-                        Sed posuere tellus nec eros consequat, quis facilisis nunc malesuada. Integer vel ligula ut tortor hendrerit vehicula.
-                        Sed posuere tellus nec eros consequat, quis facilisis nunc malesuada. Integer vel ligula ut tortor hendrerit vehicula.
+                        <h2 class="text-2xl font-bold text-yellow-900/100"> Features of This Service</h2>
+                        <section class="bg-white py-10 ">
+                            <div class=" mx-auto px-4">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                                    <!-- Service Cards -->
+                                    <div class="p-6 bg-white text-black w-full border border-yellow-900/100">
+                                        <!-- Icon -->
+                                        <div class="flex mb-2">
+                                            <img src="/img/f1.png" class="w-16 h-16" alt="Icon" />
+                                        </div>
+                                        <p class="text-gray-600 text-sm">
+                                            Roofing when an unknown printer 
+                                        </p>
+                                    </div>
                     
-                        Sed posuere tellus nec eros consequat, quis facilisis nunc malesuada. Integer vel ligula ut tortor hendrerit vehicula.
+                                    <div class="p-6 bg-white text-black w-full border border-yellow-900/100 ">
+                                        <!-- Icon -->
+                                        <div class="flex mb-2">
+                                            <img src="/img/f2.png" class="w-16 h-16" alt="Icon" />
+                                        </div>
+                                        <p class="text-gray-600 text-sm ">
+                                            Roofing when an unknown printer took a gallery of type
+                                        </p>
+                                    </div>
                     
-                        Sed posuere tellus nec eros consequat, quis facilisis nunc malesuada. Integer vel ligula ut tortor hendrerit vehicula.
-                        Sed posuere tellus nec eros consequat, quis facilisis nunc malesuada. Integer vel ligula ut tortor hendrerit vehicula.
+                                    <div class="p-4 bg-white text-black w-full border border-yellow-900/100 ">
+                                        <!-- Icon -->
+                                        <div class="flex mb-2">
+                                            <img src="/img/f3.png" class="w-16 h-16" alt="Icon" />
+                                        </div>
+                                        <p class="text-gray-600 text-sm">
+                                            Roofing when an unknown printer took a gallery 
+                                        </p>
+                                    </div>
+                    </div>                       
                     
-                        Sed posuere tellus nec eros consequat, quis facilisis nunc malesuada. Integer vel ligula ut tortor hendrerit vehicula.
-                    
-                    </p>
                 </div>
             </article>
 
             <!-- Sidebar -->
             <aside class="lg:col-span-1">
-                <div class="sticky top-8 space-y-4">
-                            <!-- Add video and audio elements -->
-                    <div class="bg-cyan-500 p-4">
-                        <h3 class="text-white font-semibold text-xl mb-6">Video</h3>
-                        <div class="space-y-4">
-                            <!-- Video element -->
-                            <iframe title="vimeo-player" src="https://player.vimeo.com/video/29628553?h=98cef2fcf2" width="full" height="full" frameborder="0"    allowfullscreen></iframe>
-                        </div>
-                        <h3 class="text-white font-semibold text-xl mb-6">Audio</h3>
-                        <div class="space-y-4">
-                            <!-- Video element -->
-                            <audio class="w-full" controls>
-                                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-                                Your browser does not support the audio tag.
-                            </audio>
-                        </div>
-                    </div>
-                        
+                <div class="sticky top-8 space-y-4 ">                        
                     <div class="bg-gray-900 p-4 ">
                         <h3 class="text-white font-semibold text-xl mb-6">Other Services</h3>
                         <div class="space-y-6">
@@ -100,7 +86,7 @@
                                     <img src="../img/landscaping.jpg" class="w-16 h-16 object-cover" />
                                     <div>
                                         <h4 class="text-white group-hover:text-cyan-400 font-medium mb-2">
-                                            Landscaping <br> ----->
+                                            Landscaping <br>  &#11166;
                                         </h4>
                                     </div>
                                 </div>
@@ -110,7 +96,7 @@
                                     <img src="../img/repair.png" class="w-16 h-16 object-cover" />
                                     <div>
                                         <h4 class="text-white group-hover:text-cyan-400 font-medium mb-2">
-                                           Repair <br> ----->
+                                           Repair <br> &#11166;
                                         </h4>
                                     </div>
                                 </div>
@@ -120,7 +106,7 @@
                                     <img src="../img/remodel.png" class="w-16 h-16 object-cover" />
                                     <div>
                                         <h4 class="text-white group-hover:text-cyan-400 font-medium mb-2">
-                                            Remodel <br> ----->
+                                            Remodel <br>  &#11166;
                                         </h4>
                                     </div>
                                 </div>
@@ -130,7 +116,7 @@
                                     <img src="../img/products.png" class="w-16 h-16 object-cover" />
                                     <div>
                                         <h4 class="text-white group-hover:text-cyan-400 font-medium mb-2">
-                                            Products <br> ----->
+                                            Products <br>  &#11166;
                                         </h4>
                                     </div>
                                 </div>
