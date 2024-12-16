@@ -19,17 +19,22 @@ function initializeSlider() {
     startSliderInterval();
 
     // Add event listeners for arrow navigation
-    document.getElementById('prev-slide').addEventListener('click', () => {
-        clearInterval(sliderInterval);
-        changeSlide(-1);
-        startSliderInterval();
-    });
+    const prevButton = document.getElementById('prev-slide');
+    const nextButton = document.getElementById('next-slide');
 
-    document.getElementById('next-slide').addEventListener('click', () => {
-        clearInterval(sliderInterval);
-        changeSlide(1);
-        startSliderInterval();
-    });
+    if (prevButton && nextButton) {
+        prevButton.addEventListener('click', () => {
+            clearInterval(sliderInterval);
+            changeSlide(-1);
+            startSliderInterval();
+        });
+
+        nextButton.addEventListener('click', () => {
+            clearInterval(sliderInterval);
+            changeSlide(1);
+            startSliderInterval();
+        });
+    }
 }
 
 function startSliderInterval() {
@@ -47,13 +52,16 @@ function updateSliderImage() {
     const sliderContainer = document.getElementById('hero-slider');
     if (!sliderContainer) return;
 
-    // Create new image element
-    const newImage = new Image();
-    newImage.src = sliderImages[currentImageIndex];
-    
-    // Update background with fade effect
+    // Apply fade-out effect
+    sliderContainer.classList.remove('fade-in');
+    void sliderContainer.offsetWidth; // Trigger reflow
     sliderContainer.style.backgroundImage = `url('${sliderImages[currentImageIndex]}')`;
+    sliderContainer.classList.add('fade-in');
 }
+
+// Initialize slider on page load
+document.addEventListener('DOMContentLoaded', initializeSlider);
+
 
 
 // Dynamic review section
