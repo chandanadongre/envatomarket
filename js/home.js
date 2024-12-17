@@ -123,7 +123,7 @@ function showNextReview() {
             <div class="relative flex flex-col justify-between bg-cover bg-center p-6 w-full md:w-1/2 h-[300px] shadow-lg" style="background-image: url('img/customer2.jpeg');">
                 <div class="absolute inset-0 bg-black opacity-70"></div>
                 <div class="relative flex flex-col z-10 h-full">
-                    <p class="text-white text-lg italic mb-4 min-h-[100px] flex items-center">"${review2.content}"</p>
+                    <p class="text-white text-lg italic mb-2 min-h-[100px] flex items-center">"${review2.content}"</p>
                     <div class="mt-auto flex justify-between items-center text-white">
                         <h4 class="font-semibold">${review2.author}</h4>
                         <span class="text-gray-300 text-sm">${review2.location}</span>
@@ -152,14 +152,14 @@ function toggleFAQ(id) {
     const icon = document.getElementById(`icon-${id}`);
     if (faq.classList.contains('hidden')) {
       faq.classList.remove('hidden');
-      icon.textContent = '-';
-      faq.previousElementSibling.classList.replace('bg-gray-200', 'bg-green-400');
-      faq.previousElementSibling.classList.replace('text-gray-700', 'text-white');
+      icon.innerHTML = '&#8897;';
+      faq.previousElementSibling.classList.replace('bg-white', 'bg-white');
+      faq.previousElementSibling.classList.replace('text-black', 'text-black');
     } else {
       faq.classList.add('hidden');
-      icon.textContent = '+';
-      faq.previousElementSibling.classList.replace('bg-green-400', 'bg-gray-200');
-      faq.previousElementSibling.classList.replace('text-white', 'text-gray-700');
+      icon.innerHTML = '&#8896;';
+      faq.previousElementSibling.classList.replace('bg-white', 'bg-white');
+      faq.previousElementSibling.classList.replace('text-black', 'text-black');
     }
 }
 
