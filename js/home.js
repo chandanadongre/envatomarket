@@ -1,11 +1,11 @@
 // Image slider configuration
 const sliderImages = [
-    'img/bg1.png',
-    'img/bg12.jpeg',
+    'img/umbrella-chair.jpg',
+    'img/swimming-pool-tropical-resort-with-garden.jpg',
     'img/bg2.jpeg',
-    'img/bg3.jpeg',
-    'img/bg4.jpg',
-    'img/bg5.jpeg'
+    'img/bg1.png',
+    'img/bg2.jpeg',
+    'img/sea-view-swimming-pool-with-sunbed.jpg'
 ];
 
 let currentImageIndex = 0;
@@ -63,8 +63,6 @@ function updateSliderImage() {
 document.addEventListener('DOMContentLoaded', initializeSlider);
 
 
-
-// Dynamic review section
 const reviews = [
     {
         id: 1,
@@ -97,46 +95,54 @@ let currentReviewIndex = 0;
 function showNextReview() {
     const reviewContainer = document.getElementById("reviewContainer");
 
-    // Fade out current reviews
+    // Fade out
     reviewContainer.classList.add("opacity-0");
 
-    // After fading out, change the review content
+    // Change content after fade-out
     setTimeout(() => {
-        currentReviewIndex = (currentReviewIndex + 2) % reviews.length; // Loop through reviews array two at a time
+        currentReviewIndex = (currentReviewIndex + 2) % reviews.length;
 
         const review1 = reviews[currentReviewIndex];
         const review2 = reviews[(currentReviewIndex + 1) % reviews.length];
 
-        // Update review container with two reviews
         reviewContainer.innerHTML = `
-            <div class="relative  p-6  flex flex-col items-center justify-center h-[300px] bg-cover bg-center" style="background-image: url('img/customer.png');">
-                <div class="absolute inset-0 bg-black opacity-70 "></div>
-                <p class="relative text-white text-lg italic mb-4 z-10">"${review1.content}"</p>
-                <h4 class="relative text-white font-semibold z-10">${review1.author}, <span class="text-gray-200">${review1.location}</span></h4>
-                <div class="flex justify-center mt-2 z-10">
-                    <span class="text-yellow-400">★★★★★</span>
+            <div class="relative flex flex-col justify-between bg-cover bg-center p-6 w-full md:w-1/2 h-[300px] shadow-lg" style="background-image: url('img/customer.png');">
+                <div class="absolute inset-0 bg-black opacity-70"></div>
+                <div class="relative flex flex-col z-10 h-full">
+                    <p class="text-white text-lg italic mb-4 min-h-[100px] flex items-center">"${review1.content}"</p>
+                    <div class="mt-auto flex justify-between items-center text-white">
+                        <h4 class="font-semibold">${review1.author}</h4>
+                        <span class="text-gray-300 text-sm">${review1.location}</span>
+                    </div>
+                    <div class="flex justify-center mt-2">
+                        <span class="text-yellow-400">★★★★★</span>
+                    </div>
                 </div>
             </div>
-            <div class="relative  p-6  flex flex-col items-center justify-center h-[300px] bg-cover bg-center" style="background-image: url('img/customer2.jpeg');">
-                <div class="absolute inset-0 bg-black opacity-70 "></div>
-                <p class="relative text-white text-lg italic mb-4 z-10">"${review2.content}"</p>
-                <h4 class="relative text-white font-semibold z-10">${review2.author}, <span class="text-gray-200">${review2.location}</span></h4>
-                <div class="flex justify-center mt-2 z-10">
-                    <span class="text-yellow-400">★★★★★</span>
+
+            <div class="relative flex flex-col justify-between bg-cover bg-center p-6 w-full md:w-1/2 h-[300px] shadow-lg" style="background-image: url('img/customer2.jpeg');">
+                <div class="absolute inset-0 bg-black opacity-70"></div>
+                <div class="relative flex flex-col z-10 h-full">
+                    <p class="text-white text-lg italic mb-4 min-h-[100px] flex items-center">"${review2.content}"</p>
+                    <div class="mt-auto flex justify-between items-center text-white">
+                        <h4 class="font-semibold">${review2.author}</h4>
+                        <span class="text-gray-300 text-sm">${review2.location}</span>
+                    </div>
+                    <div class="flex justify-center mt-2">
+                        <span class="text-yellow-400">★★★★★</span>
+                    </div>
                 </div>
             </div>
         `;
 
-        // Fade in new reviews
+        // Fade-in
         reviewContainer.classList.remove("opacity-0");
     }, 500);
 }
 
-// Automatically slide reviews every 6 seconds (2 reviews)
 setInterval(showNextReview, 3000);
-
-// Initialize with the first two reviews
 showNextReview();
+
 
 
 
@@ -169,7 +175,7 @@ const counters = document.querySelectorAll('.count');
                 if (count < target) {
                     count += Math.ceil(target / speed);
                     counter.innerText = count;
-                    setTimeout(updateCount, 10);
+                    setTimeout(updateCount, 30);
                 } else {
                     counter.innerText = target;
                 }
