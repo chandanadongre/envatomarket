@@ -106,7 +106,7 @@ function showNextReview() {
         const review2 = reviews[(currentReviewIndex + 1) % reviews.length];
 
         reviewContainer.innerHTML = `
-            <div class="relative flex flex-col justify-between bg-cover bg-center p-6 w-full md:w-1/2 h-[300px] shadow-lg" style="background-image: url('img/customer.png');">
+            <div class="relative flex flex-col justify-between bg-cover p-4 bg-center  w-full md:w-1/2 h-[300px] shadow-lg" style="background-image: url('img/customer.png');">
                 <div class="absolute inset-0 bg-black opacity-70"></div>
                 <div class="relative flex flex-col z-10 h-full">
                     <p class="text-white text-lg italic mb-4 min-h-[100px] flex items-center">"${review1.content}"</p>
@@ -152,12 +152,12 @@ function toggleFAQ(id) {
     const icon = document.getElementById(`icon-${id}`);
     if (faq.classList.contains('hidden')) {
       faq.classList.remove('hidden');
-      icon.innerHTML = '&#8897;';
+      icon.innerHTML = '&#11205;';
       faq.previousElementSibling.classList.replace('bg-white', 'bg-white');
       faq.previousElementSibling.classList.replace('text-black', 'text-black');
     } else {
       faq.classList.add('hidden');
-      icon.innerHTML = '&#8896;';
+      icon.innerHTML = '&#11206;';
       faq.previousElementSibling.classList.replace('bg-white', 'bg-white');
       faq.previousElementSibling.classList.replace('text-black', 'text-black');
     }
