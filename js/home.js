@@ -221,15 +221,3 @@ const counters = document.querySelectorAll('.count');
         // Add event listeners for manual scroll
         leftArrow.addEventListener("click", scrollLeft);
         rightArrow.addEventListener("click", scrollRight);
-    
-        // Auto-scroll every 3 seconds
-        function startAutoScroll() {
-            autoScroll = setInterval(scrollRight, scrollInterval);
-        }
-    
-        // Stop auto-scroll on hover and restart on mouse leave
-        container.addEventListener("mouseenter", () => clearInterval(autoScroll));
-        container.addEventListener("mouseleave", startAutoScroll);
-    
-        // Start the automatic scrolling on load
-        startAutoScroll();
